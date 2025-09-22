@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Club Event Management - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>College Club Event Management System</h1>
+            <h2>Sign Up</h2>
+            
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="rollNumber">Roll/Register Number:</label>
+                    <input type="text" id="rollNumber" name="rollNumber" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (optional):</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        <option value="ADMIN">Admin</option>
+                        <option value="STUDENT">Student</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deptCode">Department Code:</label>
+                    <input type="text" id="deptCode" name="deptCode" required>
+                    <small>Enter ADMIN123 for Admin or STUDENT123 for Student</small>
+                </div>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+            
+            <div class="message" id="message"></div>
+            
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    
+    <script src="signup.js"></script>
+</body>
+</html>

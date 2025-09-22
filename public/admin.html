@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - College Club Event Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Club Admin Dashboard</h1>
+            <div class="user-info">
+                <span id="userInfo"></span>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </header>
+        
+        <div class="dashboard">
+            <div class="section">
+                <h2>Create New Event</h2>
+                <form id="eventForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="title">Event Title:</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="venue">Venue:</label>
+                            <input type="text" id="venue" name="venue" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startDateTime">Start Date/Time:</label>
+                            <input type="datetime-local" id="startDateTime" name="startDateTime" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="endDateTime">End Date/Time:</label>
+                            <input type="datetime-local" id="endDateTime" name="endDateTime" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="registrationDeadline">Registration Deadline:</label>
+                            <input type="datetime-local" id="registrationDeadline" name="registrationDeadline" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="capacity">Participation Limit:</label>
+                            <input type="number" id="capacity" name="capacity" min="1" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn">Create Event</button>
+                </form>
+            </div>
+            
+            <div class="section">
+                <h2>Events Management</h2>
+                <div id="eventsList" class="card-grid"></div>
+            </div>
+            
+            <div class="section">
+                <h2>Event Participants</h2>
+                <select id="eventSelect">
+                    <option value="">Select an event to view participants</option>
+                </select>
+                <div id="participantsList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
